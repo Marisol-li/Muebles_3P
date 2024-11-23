@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muebles</title>
+    <div class="uno">.</div>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1 class="pacifico-regular">MUEBLES</h1>
+        </header>
+        <div class="prueba">
+            <h3>Selecciona alguna de las categorías para ver sus opciones</h3>
+        </div>
+        <main>
+            <category-list @select-category="setCategory" class="olita"></category-list>
+            <product-list v-if="currentCategory" :category="currentCategory"></product-list>
+        </main>
+        <footer class="pie">Marisol Salazar</footer>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
